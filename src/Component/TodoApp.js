@@ -1,8 +1,14 @@
 import * as React from "react";
+import InputField from "./InputField";
+import Content from "./Content";
 
 class TodoApp extends React.Component {
     render() {
-        return <h1>Hello app</h1>;
+        const {content} = this.props;
+        return <div>
+            <InputField />
+            <Content />
+        </div>;
     }
 }
 
