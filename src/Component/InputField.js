@@ -2,15 +2,16 @@ import * as React from "react";
 class InputField extends React.Component {
     constructor(props){
         super(props);
-        this.onKeyDown = this.onKeyDown.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
-    onKeyDown(e){
+    onSubmit(e){
 
     }
     render() {
-        return <input
-            onKeyDown={this.onKeyDown}
-        />
+        return <div>
+            <input type="text" id="contentInput"/>
+            <button id="submitBtn" onClick={this.onSubmit}>确定</button>
+        </div>
     }
 }
 
