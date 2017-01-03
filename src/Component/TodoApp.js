@@ -6,11 +6,11 @@ import TodoActions from "../Actions/TodoActions";
 
 class TodoApp extends React.Component {
     render() {
-        // const {contents} = this.props;
-        const contents = ['test1', 'test2'];
+        const {contents} = this.props;
         return <div>
-            <InputField onSubmit/>
-            <ShowContent contents={contents} />
+            <InputField onInputSubmit={this.props.inputSubmit}/>
+            <ShowContent
+                contents={contents} />
         </div>;
     }
 }
