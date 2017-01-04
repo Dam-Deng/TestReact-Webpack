@@ -7,7 +7,7 @@ import TodoActions from "../Actions/TodoActions";
 class TodoApp extends React.Component {
     render() {
         const {contents} = this.props;
-        return <div>
+        return <div className="todoApp">
             <InputField onInputSubmit={this.props.inputSubmit}/>
             <ShowContent
                 contents={contents} />
