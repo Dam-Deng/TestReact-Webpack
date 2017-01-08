@@ -6,20 +6,22 @@ class InputField extends React.Component {
     }
 
     onSubmit(e) {
+        e.preventDefault();
         let {value} = this.refs.contentInput;
         let {onInputSubmit} = this.props;
 
         onInputSubmit(value);
+        this.refs.contentInput.value = '';
     }
 
     render() {
-        return <div className="ui form">
+        return <form onSubmit={this.onSubmit} className="ui form">
             <div className="field">
                 <label>content</label>
                 <input type="text" ref="contentInput"/>
             </div>
             <button className="ui button" id="submitBtn" onClick={this.onSubmit}>确定</button>
-        </div>
+        </form>
     }
 }
 
